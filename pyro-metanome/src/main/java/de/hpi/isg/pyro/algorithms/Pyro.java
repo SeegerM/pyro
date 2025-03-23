@@ -143,11 +143,11 @@ public class Pyro
                 for (Column rhs : schema.getColumns()) {
 
                     DependencyStrategy strategy;
-                    switch (configuration.uccErrorMeasure) {
+                    switch (configuration.fdErrorMeasure) {
                         case "g1prime":
                             strategy = new FdG1Strategy(
                                     rhs,
-                                    configuration.maxUccError,
+                                    configuration.maxFdError,
                                     configuration.errorDev
                             );
                             break;
